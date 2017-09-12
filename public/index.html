@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Tipti</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/estilos.css" rel="stylesheet">
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.24/angular.min.js"></script>
+    
+    <script type="text/javascript">
+        function scrollWin() {
+            window.scrollTo(0,700);
+        }
+        function scrollWin2() {
+            window.scrollTo(0,200);
+        }
+    </script>
+
+
+</head>
+
+<body>
+
+    <header class="bg_headerAbout">
+        <img src="img/FinalWeb36.jpg" width="100%" height="730em">
+        <div onclick="scrollWin()" class="img_down"><img src="img/phone15.png" width="5%" ></div>
+    </header>
+    <header class="bg_headerAbout_grande">
+        <img src="img/FinalWeb36.jpg" width="100%" height="580em">
+    </header>
+    <header class="bg_headerAbout_medio">
+        <img src="img/FinalWeb36.jpg" width="100%" height="400em">
+    </header>
+    <header class="bg_headerAbout_cel">
+        <img src="img/FinalWeb36.jpg" width="100%" height="240em">
+    </header>
+
+    <nav class="navbar_top navbar navbar-inverse navbar-fixed-top" role="navigation" id="nav_grande">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+                    <img src="img/phone1.png" width="13%" >
+                </button>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                <ul class="ulderecho nav navbar-nav" style=" margin-right: -2%;">
+                    <li style="border: none;">
+                        <a href="http://www.tipti.market/help.html">Ayuda</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                <a href="http://www.tipti.market"><img src="img/logo.svg" style="width: 10%;margin-top: -3%;"></a>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <nav class="navbar_top navbar navbar-inverse navbar-fixed-top" role="navigation" id="nav_movil">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="derecho navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <img src="img/phone1.png">
+                </button>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">   
+                <ul class="nav navbar-nav">
+                    <ul class="nav navbar-nav">
+                        <li class="li_u">
+                            <a href="http://www.tipti.market/help.html">Ayuda</a>
+                        </li>
+                        <li class="li_u">
+                            <a href="https://itunes.apple.com/ec/app/tipti/id1193596576?mt=8H">iOS app</a>
+                        </li>
+                        <li class="li_u">
+                            <a href="https://play.google.com/store/apps/details?id=ec.tipti">Android app</a>
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+
+    <div class="container_bg" style="width: 100%">
+        <div class="texto_dia">
+            Cada día, a través de nuestros shoppers, asesoramos las compras de supermercado de nuestros clientes, garantizando la calidad y frescura de todos los productos. <br>
+            <br>
+            Conoce cómo puedes formar parte de esta nueva experiencia en compra.
+        </div>
+        <div class="dia_shopper">
+            <div class="title">El día a día de un Shopper</div>
+            <div class="descrip">Así funciona. Un dinero extra a tu medida.</div>
+            <div class="div1">
+                <img src="img/FinalWeb30.png">
+                <div class="title">1.Pedido</div>
+                <div class="descrip">Un cliente rellena su carrito a través de la App Tipti y notificamos al shopper disponible en esa zona y hora</div>
+            </div>
+            <div class="div1">
+                <img src="img/FinalWeb31.png">
+                <div class="title">2.Compra</div>
+                <div class="descrip">El Shopper realiza la compra en las tiendas seleccionadas por el cliente.</div>
+            </div>
+            <div class="div1">
+                <img src="img/FinalWeb32.png">
+                <div class="title">3.Entrega</div>
+                <div class="descrip">El Shopper entrega los productos en la dirección que ha facilitado el usuario en la hora indicada</div>
+            </div>
+            <div class="div1">
+                <img src="img/FinalWeb33.png">
+                <div class="title">4.Ingresos</div>
+                <div class="descrip">Obtén una cantidad fija por envío y un variable por cantidad y precio. Haz tantos envíos como tú quieras</div>
+            </div>
+        </div>
+        <div class="header_bg" style="margin-bottom: 4%;">
+            <div class="title_st"> INFORMACIÓN DEL SHOPPER</div>
+            <div class="subtitle_st">Revisaremos la información y te daremos una respuesta lo antes posible</div>
+        </div>
+
+        <div class="line_naranja"></div>
+        <div class="vacantes_requisitos" >
+                <form ng-submit="registroVacante(usuario)">
+                    <label class="label_completo">
+                        *Nombre completo
+                        <input type="text" ng-model="usuario.nombres" required>
+                    </label>
+                    <label class="label_completo">
+                        *Correo electrónico
+                        <input type="email" ng-model="usuario.email" required>
+                    </label>
+                    <label class="label_completo">
+                        *Dirección
+                        <input type="text" ng-model="usuario.direccion" required>
+                    </label>
+                    <label class="label_medio1">
+                        *Teléfono
+                        <input type="number" ng-model="usuario.telefono" required>
+                    </label>
+                    <label class="label_medio2">
+                        *Fecha de nacimiento
+                        <input type="text" ng-model="usuario.fecha_nac" required placeholder="01/01/2017">
+                    </label>
+                    <label class="label_medio1">
+                        *Provincia
+                        <input type="number" ng-model="usuario.provincia" required>
+                    </label>
+                    <label class="label_medio2">
+                        *Ciudad
+                        <input type="text" ng-model="usuario.ciudad" required>
+                    </label>
+                    <label class="label_tres1" >
+                        *Disponibilidad
+                        <select ng-model="usuario.disponibilidad" required>
+                            <option value="mañana">Mañana</option>
+                            <option value="tarde">Tarde</option>
+                            <option value="noche">Noche</option>
+                        </select>
+                    </label>
+                    <label class="label_tres2">
+                        *Desde
+                        <select ng-model="usuario.desde" required>
+                            <option value="08:00">08:00</option>
+                            <option value="09:00">09:00</option>
+                            <option value="10:00">10:00</option>
+                            <option value="11:00">11:00</option>
+                            <option value="12:00">12:00</option>
+                            <option value="13:00">13:00</option>
+                            <option value="14:00">14:00</option>
+                            <option value="15:00">15:00</option>
+                            <option value="16:00">16:00</option>
+                            <option value="17:00">17:00</option>
+                            <option value="18:00">18:00</option>
+                            <option value="19:00">19:00</option>
+                            <option value="20:00">20:00</option>
+                            <option value="21:00">21:00</option>
+                            <option value="22:00">22:00</option>
+                            <option value="23:00">23:00</option>
+                            <option value="24:00">24:00</option>
+                        </select>
+                    </label>
+                    <label class="label_tres3">
+                        *Hasta
+                        <select ng-model="usuario.hasta" required>
+                            <option value="08:00">08:00</option>
+                            <option value="09:00">09:00</option>
+                            <option value="10:00">10:00</option>
+                            <option value="11:00">11:00</option>
+                            <option value="12:00">12:00</option>
+                            <option value="13:00">13:00</option>
+                            <option value="14:00">14:00</option>
+                            <option value="15:00">15:00</option>
+                            <option value="16:00">16:00</option>
+                            <option value="17:00">17:00</option>
+                            <option value="18:00">18:00</option>
+                            <option value="19:00">19:00</option>
+                            <option value="20:00">20:00</option>
+                            <option value="21:00">21:00</option>
+                            <option value="22:00">22:00</option>
+                            <option value="23:00">23:00</option>
+                            <option value="24:00">24:00</option>
+                        </select>
+                    </label>
+                    <label class="label_strong">*No te olvides de subir los siguientes documentos</label><br>
+                    <label class="label_soft">(El formato de los documentos deberán ser pdf o doc y las imagenes jpg o png)</label>
+
+                    <label class="label_completo">
+                        *Curriculum Vitae (formato pdf / doc / docx)
+                        <input type="file" ng-model="usuario.curriculum" required>
+                    </label>
+                    <label class="label_completo">
+                        *Fotografía (formato jpg / png)
+                        <input type="file" ng-model="usuario.foto" required>
+                    </label>
+                    <label class="label_completo">
+                        *Certificados de experiencia laboral (mínimo 3, formato pdf / doc / docx)
+                        <input type="file" ng-model="usuario.experiencia" required>
+                    </label>
+                    <label class="label_completo">
+                        *Certificado de Referencia Personal (mínimo 3, formato pdf / doc / docx)
+                        <input type="file" ng-model="usuario.referencia" required>
+                    </label>
+                    <label class="label_completo">
+                        *Cédula de identidad (formato pdf / doc / docx / jpg / png)
+                        <input type="file" ng-model="usuario.cedula" required>
+                    </label>
+                    <button class="btn_vacante btn_vacante33" type="submit" style="font-size: 1.5em;height: 60px;    width: 25%; margin-left: 39%;">Enviar Registro</button>
+                </form>
+
+                
+            </div>
+        
+    </div>
+  </body>
+
+</html>
