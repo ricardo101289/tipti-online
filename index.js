@@ -81,8 +81,8 @@ function processFormFieldsIndividual(req, res) {
         var transporter = nodemailer.createTransport({
             service: 'Gmail',
             auth: {
-                user: 'lmishelle16@gmail.com',
-                pass: 'mili16@@'
+                user: 'Tipti.market.mail@gmail.com',
+                pass: 'tipti2017'
             }
         });
 
@@ -92,7 +92,7 @@ function processFormFieldsIndividual(req, res) {
         if ( fields['form_id'] === "formReteiler" ) {
 
                 var mailOptions = {
-                    from: fields['Email'] , to: 'ricardo101289@gmail.com, rafael.luque@tipti.market, rluque.jara@tipti.market, pierangela@tipti.market',
+                    from: fields['Email'] , to: 'ricardo101289@gmail.com, lmishelle16@gmail.com, rafael.luque@tipti.market, rluque.jara@tipti.market, pierangela@tipti.market',
                     subject: 'Queremos ser tu socio comercial',
                     text: 'Mensaje',
                     html: '<p>Nombre del Local: '+fields['nombreLocal']+'</p>' +
@@ -124,7 +124,7 @@ function processFormFieldsIndividual(req, res) {
         }else if ( fields['form_id'] === "formShopperjob" ) {
             console.log("for con archivos");
             var mailOptions = {
-                from: fields['emailShopper'] , to: 'ricardo101289@gmail.com, rafael.luque@tipti.market, rluque.jara@tipti.market, talento.humano@productivos.ec',
+                from: fields['emailShopper'] , to: 'ricardo101289@gmail.com, lmishelle16@gmail.com, rafael.luque@tipti.market, rluque.jara@tipti.market, talento.humano@productivos.ec',
                 subject: 'CURRICULUM DEL SHOPPER',
                 text: 'Mensaje',
                 html: '<p>Nombres: '+fields['nombreShopper']+'</p>' +
@@ -174,7 +174,7 @@ function processFormFieldsIndividual(req, res) {
         }else if ( fields['form_id'] === "formSector" ) {
             console.log("form Sector");
             var mailOptions = {
-                from: fields['usuario_correo'] , to: 'ricardo101289@gmail.com, rafael.luque@tipti.market, care.team@tipti.market, rluque.jara@tipti.market',
+                from: fields['usuario_correo'] , to: 'ricardo101289@gmail.com, lmishelle16@gmail.com, rafael.luque@tipti.market, care.team@tipti.market, rluque.jara@tipti.market',
                 subject: 'SECTOR NO ENCONTRADO',
                 text: 'Mensaje',
                 html: '<p>Nombre de Usuario: '+fields['usuario_nombre']+'</p>' +
